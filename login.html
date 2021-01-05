@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Login</title>
+</head>
+<body>
+<form action="">
+    <fieldset>
+        <legend>Login</legend>
+        <input type="text" placeholder="username" id="username">
+        <input type="password" placeholder="password here..." id="password">
+        <button onclick="login()">Login</button>
+    </fieldset>
+</form>
+
+<script>
+    let limit = 3;
+    let count = 0;
+
+    function login() {
+        let u = document.getElementById('username').value;
+        let p = document.getElementById('password').value;
+        if (count < limit) {
+            if (u == 'dao') {
+                if (p == '123') {
+                    alert("Dang nhap thanh cong");
+                } else {
+                    alert('Sai password');
+                }
+            } else {
+                alert("Sai tai khoan");
+            }
+            count++;
+        }else {
+            alert("Da het luot truy cap! ban da bi khoa tai khoan");
+        }
+    }
+</script>
+</body>
+</html>
